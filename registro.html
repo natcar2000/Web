@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registro</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <ul>
+                <li class="links"><a href="registro.html">Registro</a></li>
+                <li class="links"><a href="login.html">Login</a></li>
+            </ul>
+        </nav><br><br>
+        <h2>Preencha o formulario abaixo para criar uma conta</h2><br>
+        <main>
+            <form action="server.php" method="POST">
+                <label for="p_nome">Primeiro nome:</label>
+                <input type="text" name="p_nome" maxlength="15" required><br><br>
+                <label for="u_nome">Ultimo nome:</label>
+                <input type="text" name="u_nome" maxlength="15" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" maxlength="100"><br><br>
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" minlength="8" maxlength="16" required><br><br>
+                <label for="c_senha">Confirme a senha:</label>
+                <input type="password" id="c_senha" name="c_senha" minlength="8" maxlength="16" required><br><br>
+                <input type="hidden" name="action" value="registro">              
+                <input type="submit" onclick="return valida_senhas()" value="Registrar">
+            </form>
+        </main>
+        <script>
+            function valida_senhas(){
+                validacao = false;
+                const senha = document.getElementById('senha').value;
+                const c_senha = document.getElementById('c_senha').value;
+                if (senha != c_senha){
+                    alert('As senhas devem ser iguais');
+                }
+                else{
+                    validacao = true;
+                }
+                return validacao;
+            }
+        </script>
+    </body>
+</html>
