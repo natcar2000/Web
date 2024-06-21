@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <ul>
+                <li class="links"><a href="registro.html">Registro</a></li>
+                <li class="links"><a href="login.html">Login</a></li>
+            </ul>
+        </nav><br><br>
+        <h2>Preencha o formulario para acessar sua conta</h2><br>
+        <main>
+            <form action="server.php" method="POST">
+                <label for="email">Email:</label>
+                <input type="email" name="email" maxlength="100" required><br><br>
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" minlength="8" maxlength="16" required><br><br>
+                <input type="hidden" name="action" value="login">
+                <input type="submit" value="Logar">
+            </form>        
+        </main>
+    </body>
+</html>
