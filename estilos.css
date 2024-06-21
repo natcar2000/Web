@@ -1,0 +1,20 @@
+.navbar{
+    display: flex;
+    background-color: teal;
+    padding: 7px;
+    margin-left: auto;
+
+}
+
+a{
+    color: white;
+}
+
+.links{
+    padding-right: 10px;
+    display: contents;
+}
+
+input{
+    align-items: center;
+}
